@@ -28,7 +28,8 @@ We leverage pre-existing architecture and code from Pommerman Competition as cit
       <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/publications/wb/</guid>
-      <description> Developed Python image identification pipeline and model for identifying DC Universe characters in a given DCU comic page. Built Xception Convolutional Neural Network in Keras framework while training model on AWS EC2 instance. Present project architecture and convolutional neural network model&amp;rsquo;s layer activation to WB executive, data intelligence team, and DCU stakeholders.  </description>
+      <description>This was a 10 week internship from June 2019 - August 2019
+ What was achieved  Developed Python image identification  model for identifying any DC Universe characters in a given DC Universe comic page achieving 76% accuracy. Presented project architecture and model&amp;rsquo;s layer activation to WB executive, data intelligence team, and DCU stakeholders. Deployed Python web crawler that collects and parses DC comic images of any DC Universe Character.</description>
     </item>
     
   </channel>

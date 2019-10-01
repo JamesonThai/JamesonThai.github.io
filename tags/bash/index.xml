@@ -17,7 +17,7 @@
       <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/publications/usc/</guid>
-      <description>  Develop web application to enable users to analyze different quality metrics of software systems as it evolves over time. Visualize and construct a Tensorflow.js predictive model for predicting when, how, and to what extent developers influence software quality attributes. Introduce new features in frontend to visualize data as well as conduct real-time machine learning techniques on presented data.  Research Paper Links  Towards Better Understanding of Software Maintainability Evolution Towards Better Understanding of Software Quality Evolution through Commit-Impact Analysis A scalable and efficient approach for compiling and analyzing commit history  </description>
+      <description>Develop a cloud-based framework to enable users to analyze and study changes over the development history of a software system to better understand when, how, and to what extent developers influence software quality attributes. Introduce new features in frontend to visualize data as well as conduct real-time machine learning techniques on presented data. Visualize and construct a Tensorflow.js predictive model for predicting when, how, and to what extent developers influence software quality attributes.</description>
     </item>
     
   </channel>
