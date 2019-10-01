@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Home on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/</link>
+    <description>Recent content in Home on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 10 Feb 2018 18:56:13 -0500</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Riot Champion Trend and Item Recommender</title>
+      <link>https://jamesonthai.github.io/projects/creations/riot-games-data-analysis/</link>
+      <pubDate>Sun, 11 Aug 2019 12:41:05 -0500</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/riot-games-data-analysis/</guid>
+      <description>Riot Champion Trends and Item Recommender &amp;ldquo;is a data science project that aims to visualize a user&amp;rsquo;s performance by comparing their matches and timeline data against professional or similar ranking players using R and Plotly.&amp;rdquo; Based on this information, if there is enough correlation between player performance and items to wins, then recommend corresponding items based on matchups.
+Goals Primary
+Compile list of professional players from Season 9 of League of Legends Acquire Data from RIOT Servers Build Pipeline for automated collection Conduct data analysis and visualize results &amp;ndash; In Progress Determine if secondary objectives are viable  Secondary</description>
+    </item>
+    
+    <item>
+      <title>Pommerman</title>
+      <link>https://jamesonthai.github.io/projects/contributions/pommerman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/contributions/pommerman/</guid>
+      <description>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely meaningful variations through competitive multi-agent learning.</description>
+    </item>
+    
+    <item>
+      <title>Amazon Reviews - Sentiment Analysis</title>
+      <link>https://jamesonthai.github.io/projects/creations/amazon-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/amazon-review/</guid>
+      <description>Leading two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. This is a multi-classification
+Goals Acquire Amazon Dataset Exploratory analysis of dataset Use ML Algorithms to predict review ratings Build Jupyter notebook to predict ratings Visualize preprocessed information and compiled Bag Of Words Present findings to general and informed audience  Algorithms  KNN Naive Bayes Ordered Logistic Regression Linear SVM Doc2Vec Decision Trees  Dataset We filtered the initial dataset of over 12 million reviews (12 GB) into five separate csv corresponding to their star ratings using Pandas.</description>
+    </item>
+    
+    <item>
+      <title>TravelGo - Learn New Phrases</title>
+      <link>https://jamesonthai.github.io/projects/contributions/travelgo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/contributions/travelgo/</guid>
+      <description>Working with another student, TravelGo is an Android Application aimed to function as a communication guide for traveling users. With a simple design, it includes examples in a variety of categories to help users learn on the go.</description>
+    </item>
+    
+    <item>
+      <title>AVA - Music Visualizer</title>
+      <link>https://jamesonthai.github.io/projects/creations/ava/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/ava/</guid>
+      <description>An Automated Visualzing Application. AVA. Collaborating with two fellow students, AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project avter the iTunes Visualizer but incorporating album art to the accompaning piece. Additionally we aim to provide sentiment analysis that analyzes the mood of the music.</description>
+    </item>
+    
+    <item>
+      <title>How In The World</title>
+      <link>https://jamesonthai.github.io/projects/creations/how-in-the-world/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/how-in-the-world/</guid>
+      <description>Mobile game designed for children ages five to nine in an effort to teach youths about cultural literacy while being imformative but also fun. Leading a team of five, we were introduced to the agile methodology as we worked with our client. To develop this came we taught ourselves Lua and Corona SDK over the course of the semester. The game is live and on the itunes app store!</description>
+    </item>
+    
+    <item>
+      <title>Organically DevOps: Building Quality and Security into the Software Supply Chain at Liberty Mutual</title>
+      <link>https://jamesonthai.github.io/publications/alldaydevops/</link>
+      <pubDate>Tue, 08 Nov 2016 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/publications/alldaydevops/</guid>
+      <description>This talk looked at Liberty Mutual’s transformation to Continuous Integration, Continuous Delivery, and DevOps. For a large, heavily regulated industry, this task can not only be daunting, but viewed by many as impossible. Often, organizations try to reduce the friction through micro-fixes, but Eddie’s team asked how to change the culture to reduce the friction and concluded with the following final points:
+ Don’t mandate DevOps. Give employees the chance to master their discipline with examples to set and follow.</description>
+    </item>
+    
+    <item>
+      <title>Search Results</title>
+      <link>https://jamesonthai.github.io/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/search/</guid>
+      <description>This file exists solely to respond to /search URL with the related search layout template.
+No content shown here is rendered, all content is based in the template layouts/page/search.html
+Setting a very low sitemap priority will tell search engines this is not important content.
+This implementation uses Fusejs, jquery and mark.js
+Initial setup Search depends on additional output content type of JSON in config.toml
+[outputs] home = [&amp;quot;HTML&amp;quot;, &amp;quot;JSON&amp;quot;]  Searching additional fileds To search additional fields defined in front matter, you must add it in 2 places.</description>
+    </item>
+    
+  </channel>
+</rss>

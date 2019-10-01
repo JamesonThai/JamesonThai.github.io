@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Kaggle on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/tags/kaggle/</link>
+    <description>Recent content in Kaggle on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Aug 2019 12:41:05 -0500</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/tags/kaggle/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Riot Champion Trend and Item Recommender</title>
+      <link>https://jamesonthai.github.io/projects/creations/riot-games-data-analysis/</link>
+      <pubDate>Sun, 11 Aug 2019 12:41:05 -0500</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/riot-games-data-analysis/</guid>
+      <description>Riot Champion Trends and Item Recommender &amp;ldquo;is a data science project that aims to visualize a user&amp;rsquo;s performance by comparing their matches and timeline data against professional or similar ranking players using R and Plotly.&amp;rdquo; Based on this information, if there is enough correlation between player performance and items to wins, then recommend corresponding items based on matchups.
+Goals Primary
+Compile list of professional players from Season 9 of League of Legends Acquire Data from RIOT Servers Build Pipeline for automated collection Conduct data analysis and visualize results &amp;ndash; In Progress Determine if secondary objectives are viable  Secondary</description>
+    </item>
+    
+  </channel>
+</rss>

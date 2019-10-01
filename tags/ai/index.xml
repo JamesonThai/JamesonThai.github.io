@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AI on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/tags/ai/</link>
+    <description>Recent content in AI on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jamesonthai.github.io/tags/ai/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pommerman</title>
+      <link>https://jamesonthai.github.io/projects/contributions/pommerman/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/contributions/pommerman/</guid>
+      <description>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely meaningful variations through competitive multi-agent learning.</description>
+    </item>
+    
+  </channel>
+</rss>

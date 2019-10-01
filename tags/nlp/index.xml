@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/tags/nlp/</link>
+    <description>Recent content in NLP on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="https://jamesonthai.github.io/tags/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Amazon Reviews - Sentiment Analysis</title>
+      <link>https://jamesonthai.github.io/projects/creations/amazon-review/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/projects/creations/amazon-review/</guid>
+      <description>Leading two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. This is a multi-classification
+Goals Acquire Amazon Dataset Exploratory analysis of dataset Use ML Algorithms to predict review ratings Build Jupyter notebook to predict ratings Visualize preprocessed information and compiled Bag Of Words Present findings to general and informed audience  Algorithms  KNN Naive Bayes Ordered Logistic Regression Linear SVM Doc2Vec Decision Trees  Dataset We filtered the initial dataset of over 12 million reviews (12 GB) into five separate csv corresponding to their star ratings using Pandas.</description>
+    </item>
+    
+  </channel>
+</rss>
