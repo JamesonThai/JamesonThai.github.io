@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pixel Activations on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/tags/pixel-activations/</link>
+    <description>Recent content in Pixel Activations on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 08 Jun 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/tags/pixel-activations/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Data Science Intern</title>
+      <link>https://jamesonthai.github.io/publications/wb/</link>
+      <pubDate>Sat, 08 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/publications/wb/</guid>
+      <description> Developed Python image identification pipeline and model for identifying DC Universe characters in a given DCU comic page. Built Xception Convolutional Neural Network in Keras framework while training model on AWS EC2 instance. Present project architecture and convolutional neural network model&amp;rsquo;s layer activation to WB executive, data intelligence team, and DCU stakeholders.  </description>
+    </item>
+    
+  </channel>
+</rss>

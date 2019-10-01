@@ -17,9 +17,8 @@
       <pubDate>Sun, 11 Aug 2019 12:41:05 -0500</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/creations/riot-games-data-analysis/</guid>
-      <description>Riot Champion Trends and Item Recommender &amp;ldquo;is a data science project that aims to visualize a user&amp;rsquo;s performance by comparing their matches and timeline data against professional or similar ranking players using R and Plotly.&amp;rdquo; Based on this information, if there is enough correlation between player performance and items to wins, then recommend corresponding items based on matchups.
-Goals Primary
-Compile list of professional players from Season 9 of League of Legends Acquire Data from RIOT Servers Build Pipeline for automated collection Conduct data analysis and visualize results &amp;ndash; In Progress Determine if secondary objectives are viable  Secondary</description>
+      <description>Riot Champion Trends and Item Recommender is a data science project where I analyze and visualize a user&amp;rsquo;s performance in League of Legends. I compare their playing history data against a list of professional or similar ranking player&amp;rsquo;s game history data using R.
+To obtain the list of professional players game data, I built a Python web crawler using the requests library and RIOT API to scrape their game data, storing them into JSON files.</description>
     </item>
     
   </channel>

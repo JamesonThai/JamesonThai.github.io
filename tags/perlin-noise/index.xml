@@ -16,7 +16,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/creations/ava/</guid>
-      <description>An Automated Visualzing Application. AVA. Collaborating with two fellow students, AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project avter the iTunes Visualizer but incorporating album art to the accompaning piece. Additionally we aim to provide sentiment analysis that analyzes the mood of the music.</description>
+      <description>I led a team of three to build an Automated Visualzing Application, AVA, for helping musicians visualize their music by analyzing musical notes and tones. AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project after the iTunes Visualizer but also incorporate an album art to the accompaning piece.</description>
     </item>
     
   </channel>

@@ -6,6 +6,7 @@
     <description>Recent content in Javascript on Jameson Thai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Fri, 08 Sep 2017 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jamesonthai.github.io/tags/javascript/index.xml" rel="self" type="application/rss+xml" />
     
@@ -16,7 +17,18 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/creations/ava/</guid>
-      <description>An Automated Visualzing Application. AVA. Collaborating with two fellow students, AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project avter the iTunes Visualizer but incorporating album art to the accompaning piece. Additionally we aim to provide sentiment analysis that analyzes the mood of the music.</description>
+      <description>I led a team of three to build an Automated Visualzing Application, AVA, for helping musicians visualize their music by analyzing musical notes and tones. AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project after the iTunes Visualizer but also incorporate an album art to the accompaning piece.</description>
+    </item>
+    
+    <item>
+      <title>Web Developer</title>
+      <link>https://jamesonthai.github.io/publications/sjsu/</link>
+      <pubDate>Fri, 08 Sep 2017 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/publications/sjsu/</guid>
+      <description>Improved existing SQL queries and pHP sanitization protocols Overhauled preexisting ticketing system with Google Scripting Language Assisted consumers in strengthening the fine arts community by recommending similar performing arts shows evaluated from user data. Design, develop, and maintain College of Humanties and Art&amp;rsquo;s departmant and San Jose Hammer Theater Center&amp;rsquo;s websites.  Project Links Ticketing System
+Humanties and Arts Website
+Hammer Theatre</description>
     </item>
     
   </channel>

@@ -6,9 +6,19 @@
     <description>Recent content in Java on Jameson Thai</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Thu, 08 Aug 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jamesonthai.github.io/tags/java/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Developer</title>
+      <link>https://jamesonthai.github.io/publications/usc/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/publications/usc/</guid>
+      <description>  Develop web application to enable users to analyze different quality metrics of software systems as it evolves over time. Visualize and construct a Tensorflow.js predictive model for predicting when, how, and to what extent developers influence software quality attributes. Introduce new features in frontend to visualize data as well as conduct real-time machine learning techniques on presented data.  Research Paper Links  Towards Better Understanding of Software Maintainability Evolution Towards Better Understanding of Software Quality Evolution through Commit-Impact Analysis A scalable and efficient approach for compiling and analyzing commit history  </description>
+    </item>
     
     <item>
       <title>TravelGo - Learn New Phrases</title>
@@ -16,7 +26,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/contributions/travelgo/</guid>
-      <description>Working with another student, TravelGo is an Android Application aimed to function as a communication guide for traveling users. With a simple design, it includes examples in a variety of categories to help users learn on the go.</description>
+      <description>Working with another student, TravelGo is an Android Application I contributed that aimed to function as a communication guide for traveling users. With a simple design, it includes examples in a variety of categories to help users learn on the go.</description>
     </item>
     
     <item>
@@ -25,7 +35,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/creations/ava/</guid>
-      <description>An Automated Visualzing Application. AVA. Collaborating with two fellow students, AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project avter the iTunes Visualizer but incorporating album art to the accompaning piece. Additionally we aim to provide sentiment analysis that analyzes the mood of the music.</description>
+      <description>I led a team of three to build an Automated Visualzing Application, AVA, for helping musicians visualize their music by analyzing musical notes and tones. AVA is based on machine learning model using Hidden Markov Chains (HNMs) and a Neural Netowrk created by Pybrain. She can detect pitch, rhythm, beat times and more helping musicians visualize their music while also providing album art. We model our project after the iTunes Visualizer but also incorporate an album art to the accompaning piece.</description>
     </item>
     
   </channel>

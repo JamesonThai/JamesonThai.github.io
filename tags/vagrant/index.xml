@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vagrant on Jameson Thai</title>
+    <link>https://jamesonthai.github.io/tags/vagrant/</link>
+    <description>Recent content in Vagrant on Jameson Thai</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 08 Aug 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/tags/vagrant/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Developer</title>
+      <link>https://jamesonthai.github.io/publications/usc/</link>
+      <pubDate>Thu, 08 Aug 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jamesonthai.github.io/publications/usc/</guid>
+      <description>  Develop web application to enable users to analyze different quality metrics of software systems as it evolves over time. Visualize and construct a Tensorflow.js predictive model for predicting when, how, and to what extent developers influence software quality attributes. Introduce new features in frontend to visualize data as well as conduct real-time machine learning techniques on presented data.  Research Paper Links  Towards Better Understanding of Software Maintainability Evolution Towards Better Understanding of Software Quality Evolution through Commit-Impact Analysis A scalable and efficient approach for compiling and analyzing commit history  </description>
+    </item>
+    
+  </channel>
+</rss>
