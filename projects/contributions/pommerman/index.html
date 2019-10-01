@@ -112,7 +112,77 @@
 <section class="resume-section p-3 p-lg-5 d-flex d-column">
   <div class="my-auto">
     <h2 class="mb-0"><span class="text-primary">Pommerman</span></h2>
-    <p>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely  meaningful variations through competitive multi-agent learning.</p>
+    
+
+<p>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely  meaningful variations through competitive multi-agent learning. We split our team into two teams, Pytorch and TensorForce, with the goal of seeing if different frameworks lead to different results but trying the same algorithms being PPO and A2C.</p>
+
+<p>Utilizes pre-existing architecture and code from Pommerman Competition as cited below.</p>
+
+<blockquote>
+<p><a href="https://www.pommerman.com/">Pommerman Competition</a></p>
+
+<p><a href="https://github.com/rwightman/pytorch-pommerman-rl">Forked from Git</a></p>
+</blockquote>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="primary">Primary</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Learn OpenAI Gym, Pommerman File, Suggested Algorithms</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Set up GCP or cloud training</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Build/Train PPO/A2C Agent</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Integrate Pytorch with Tensorboard</label></li>
+</ul>
+
+<h3 id="secondary">Secondary</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> Publish Medium Article</label></li>
+</ul>
+
+<h3 id="in-progress">In Progress</h3>
+
+<ul class="task-list">
+<li><label><input type="checkbox" disabled class="task-list-item"> HyperParameter Tune</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Define Evaluation Metrics for Visualization</label></li>
+</ul>
+
+<h2 id="algorithms">Algorithms</h2>
+
+<ul>
+<li>Proximal Policy Optimization (PPO)</li>
+<li>Advantage Actor Critic (A2C)</li>
+</ul>
+
+<blockquote>
+<p>Why PPO AND A2C?</p>
+</blockquote>
+
+<p>They&rsquo;re up-to-date algorithms that helps agents become better as they&rsquo;re trained. They&rsquo;re the same with some differences being that PPO is a better version of A2C.</p>
+
+<p>PPO: Changes will not be as drastic as rewards that are capped at a threshold.</p>
+
+<h2 id="training">Training</h2>
+
+<blockquote>
+<p>Done on cloud server, currently on Google Cloud Platform (GCP) K80 GPU but on free school credits.</p>
+</blockquote>
+
+<p>In modifying the reward states, we researched papers extensively in seeing what was proposed and how it could help our model. Training with A2C is a lot quicker than PPO but not as consistent/stable.</p>
+
+<p>Note: Unfortuantely we could not use Google Collab which is a free to use service since it does not support Conda 2.7+ with Python 3+ as required to run the GYM environment.</p>
+
+<dl>
+<dt>Technical Terms</dt>
+<dd>GYM - Environment to run game simulation, enables us to tweak speed of game and playing</dd>
+<dd>Playground - Provided Pommerman project that allows us to build and train agents</dd>
+<dd>Reward - What is used to tell the agent their action was good or bad ranging from -1.0 to 1.0</dd>
+</dl>
+
+<h3 id="status">Status</h3>
+
+<p>In-Progress August 2018 - Present</p>
 
     <p>Project link: <a href="https://github.com/Pommerman">https://github.com/Pommerman</a></p>
     <ul class="tags">
@@ -140,6 +210,14 @@
       <li><a class="tag" href="/tags/machine-learning">Machine Learning</a></li>
     
       <li><a class="tag" href="/tags/ai">AI</a></li>
+    
+      <li><a class="tag" href="/tags/gym">GYM</a></li>
+    
+      <li><a class="tag" href="/tags/numpy">Numpy</a></li>
+    
+      <li><a class="tag" href="/tags/conda">Conda</a></li>
+    
+      <li><a class="tag" href="/tags/opencv">OpenCV</a></li>
     
 </ul>
 
