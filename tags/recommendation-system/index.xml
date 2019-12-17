@@ -30,14 +30,5 @@ To obtain the list of professional players game data, I built a Python web crawl
       <description>I led two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. We narrated and presented our findings in the Amazon project to a group of our peers in that we found common singular words and n-grams used when describing a project. At the end of the project, we were able to build a prediction model where given a sentence it recommended a star rating from 1 being the worst to 5 being the best for the given sentence.</description>
     </item>
     
-    <item>
-      <title>Cooking Journey</title>
-      <link>https://jamesonthai.github.io/projects/creations/cooking-journey/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jamesonthai.github.io/projects/creations/cooking-journey/</guid>
-      <description>I led two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. We narrated and presented our findings in the Amazon project to a group of our peers in that we found common singular words and n-grams used when describing a project. At the end of the project, we were able to build a prediction model where given a sentence it recommended a star rating from 1 being the worst to 5 being the best for the given sentence.</description>
-    </item>
-    
   </channel>
 </rss>

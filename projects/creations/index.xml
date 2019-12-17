@@ -36,7 +36,10 @@ To obtain the list of professional players game data, I built a Python web crawl
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jamesonthai.github.io/projects/creations/cooking-journey/</guid>
-      <description>I led two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. We narrated and presented our findings in the Amazon project to a group of our peers in that we found common singular words and n-grams used when describing a project. At the end of the project, we were able to build a prediction model where given a sentence it recommended a star rating from 1 being the worst to 5 being the best for the given sentence.</description>
+      <description> A mobile game inspired by Overcooked, Cooking Mama and DoorDash/Uber Eats created in Unity.
+Goals Build Resturant Scene. Build Driving Scenes. Link scenes. Deploy on Ios and Android. Develop in game currency system and usage.  Unity Status Completed December 2019
+ Although listed as completed, this is a project I want to revisit when I have more time.
+ </description>
     </item>
     
     <item>
