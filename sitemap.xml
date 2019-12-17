@@ -25,6 +25,11 @@
   </url>
   
   <url>
+    <loc>https://jamesonthai.github.io/projects/creations/cooking-journey/</loc>
+    <priority>0.1</priority>
+  </url>
+  
+  <url>
     <loc>https://jamesonthai.github.io/projects/contributions/travelgo/</loc>
     <priority>0.1</priority>
   </url>
