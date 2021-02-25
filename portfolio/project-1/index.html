@@ -167,30 +167,112 @@ if (!doNotTrack) {
           </div>
           <div class="content">
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.</p>
+<h2 id="table-of-contents">Table of Contents</h2>
 
-<h4 id="project-details">Project Details</h4>
+<ol>
+<li><a href="#Goals">Goals</a></li>
+<li><a href="#Introduction">Introduction</a></li>
+<li><a href="#Notebook">Notebook</a></li>
+<li><a href="#Prediction">Prediction</a></li>
+<li><a href="#Graphs">Graphs</a></li>
+<li><a href="#Conclusion">Conclusion</a></li>
+</ol>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
+<h2 id="goals">Goals</h2>
 
-<h4 id="project-requirements">Project Requirements</h4>
+<ol>
+<li>Predict statistical causes of wildfires in the United States of America. [x]</li>
+<li>Conduct EDA of dataset. [x]</li>
+<li>Compare and evaluate different prediction models. [x]</li>
+<li>Find prediction values at various sample sizes. [ ]
+<br /></li>
+</ol>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.</p>
+<h2 id="introduction">Introduction</h2>
+
+<p>This dataset is a spatial database of historical wildfires in the United States from 1992 to 2015. The dataset is generated to support the Fire Program Analysis (FPA) system. In using this I aim to see if I can predict the statistical causes of wildfires? Moreover I also conduct Exploratory Data Analysis (EDA) to discover and observe frequencies of fires as their locations.</p>
+
+<p>Kaggle Notebook Link: <a href="https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire">https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire</a>
+  Kaggle Link: <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires">https://www.kaggle.com/rtatman/188-million-us-wildfires</a></p>
+
+<p>Citation:
+    Short, Karen C. 2017. Spatial wildfire occurrence data for the United States, 1992-2015 [FPAFOD20170508]. 4th Edition. Fort Collins, CO: Forest Service Research Data Archive. <a href="https://doi.org/10.2737/RDS-2013-0009.4">https://doi.org/10.2737/RDS-2013-0009.4</a></p>
+
+<h2 id="notebook">Notebook</h2>
+
+<p>You can download and run the notebook as it. Some of the required packages include plotly, json, pandas, sqlite3, scikit-learn, xgboost, random forests, and numpy.</p>
+
+<h2 id="prediction">Prediction</h2>
+
+<p>The results are as follows, because the file size for the notebook is limited, I moved some of the other models to a different section which will be uploaded.
+  | | Random Forests | XGBoost | Logistic Regression | SVM
+  |&ndash;|&ndash;|&ndash;|&ndash; |&ndash; |
+  | 13 categories | 59% | 60% | | |
+  | 3 categories | n/a | 81% | | |</p>
+
+<ul>
+<li>Specifically for the 3 categories in Random Forests, it crashed. Currently trying to find a workaround.</li>
+</ul>
+
+<h2 id="graphs">Graphs</h2>
+
+<p>&ndash; IN Progress &ndash;</p>
+
+<h3 id="u-s-a-county-fires">U.S.A. County Fires</h3>
+
+<p>These graphs look at the number of reported county fires from 1992 to 2015.</p>
+
+<p><img src="readme_imgs/counties_fires.gif" alt="" />
+   - This animated graph displays the number of reported county fires from 1992 to 2015 by year. The information is broken down by state and further broken down by the counties for every year.</p>
+
+<p><img src="readme_imgs/second_analysis.png" alt="" />
+   - This second graphs displays the total number of reported county fires from 1992 to 2015.</p>
+
+<h3 id="u-s-a-wildfires-by-state">U.S.A. Wildfires by State</h3>
+
+<p><img src="readme_imgs/wildfires_all.png" alt="" /></p>
+
+<ul>
+<li>From 1992 to 2015, California has the highest number of reported wildfires followed by Georgia and Texas. This includes both causes known and unknown.
+<br /></li>
+</ul>
+
+<h3 id="statistical-causes-of-fires">Statistical Causes of Fires</h3>
+
+<p><img src="readme_imgs/5th_analysis.png" alt="" /></p>
+
+<ul>
+<li>A colorful chart however it is pretty interesting to look up the makeup of reported fires causes by year. Each color scheme represents the statistical cause and all of these are stacked up to represent the total number of reported fires with a statistical cause.
+<br /></li>
+</ul>
+
+<h3 id="acres-burned">Acres burned</h3>
+
+<p><img src="readme_imgs/acres_burned.gif" alt="" /></p>
+
+<ul>
+<li>Another animated chart however it visualizes how many acres were burned per year by each statistical cause. As the graph constantly shifts, so does the number of acres by each fire.
+<br /></li>
+</ul>
+
+<h3 id="correlations-between-predicted-variables">Correlations between predicted variables</h3>
+
+<p><img src="readme_imgs/correlations.png" alt="" /></p>
+
+<ul>
+<li>Correlations between prediction variables, this information is used for the random forest tree.</li>
+</ul>
+
+<h3 id="feature-importance">Feature Importance</h3>
+
+<ul>
+<li>In Progress =&gt; Grabbing images&hellip;
+<br /></li>
+</ul>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>We can predict wildfires with around 60% accuracy across the 13 statistical causes. If we reduce the number of classification categories to natural, human, and other causes we can achieve around 81% accuracy! Ultimately fires in the United States are having an upward trend and are seemily becoming more frequent in states like California, North Carolina, and Arizona.</p>
 </div>
         </div>
       </div>
