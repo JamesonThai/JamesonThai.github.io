@@ -1,6 +1,6 @@
 ######################## default configuration ####################
 baseURL = "https://jamesonthai.github.io"
-title = "Somrat | Hugo Portfolio Template"
+title = "Jameson Portfolio"
 theme = "somrat"
 # post pagination
 paginate = "6"
