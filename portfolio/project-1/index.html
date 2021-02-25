@@ -47,7 +47,7 @@
   
 
   
-  <meta property="og:image" content="https://jamesonthai.github.io/images/portfolio/counties_fires.gif" />
+  <meta property="og:image" content="https://jamesonthai.github.io/images/portfolio/wildfires/counties_fires.gif" />
   
   <meta property="og:title" content="Predicting Statistical Causes of Wildfires" />
 <meta property="og:description" content="This is meta description." />
@@ -161,13 +161,13 @@ if (!doNotTrack) {
     <div class="row">
       <div class="col-lg-8 mb-4 mb-lg-0">
         <div class="wow fadeInUp" data-wow-duration="1.5s">
-          <img src="https://jamesonthai.github.io/images/portfolio/counties_fires.gif" alt="image" class="img-fluid w-100 mb-5">
+          <img src="https://jamesonthai.github.io/images/portfolio/wildfires/counties_fires.gif" alt="image" class="img-fluid w-100 mb-5">
           <div class="about-me-text mb-4">
             <h1>Predicting Statistical Causes of Wildfires</h1>
           </div>
           <div class="content">
 
-<h2 id="table-of-contents">Table of Contents</h2>
+<h1 id="table-of-contents">Table of Contents</h1>
 
 <ol>
 <li><a href="#Goals">Goals</a></li>
@@ -178,7 +178,7 @@ if (!doNotTrack) {
 <li><a href="#Conclusion">Conclusion</a></li>
 </ol>
 
-<h2 id="goals">Goals</h2>
+<h1 id="Goals">Goals</h1>
 
 <ol>
 <li>Predict statistical causes of wildfires in the United States of America. [x]</li>
@@ -188,25 +188,34 @@ if (!doNotTrack) {
 <br /></li>
 </ol>
 
-<h2 id="introduction">Introduction</h2>
+<h1 id="Introduction">Introduction</h1>
 
 <p>This dataset is a spatial database of historical wildfires in the United States from 1992 to 2015. The dataset is generated to support the Fire Program Analysis (FPA) system. In using this I aim to see if I can predict the statistical causes of wildfires? Moreover I also conduct Exploratory Data Analysis (EDA) to discover and observe frequencies of fires as their locations.</p>
 
-<p>Kaggle Notebook Link: <a href="https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire">https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire</a>
-  Kaggle Link: <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires">https://www.kaggle.com/rtatman/188-million-us-wildfires</a></p>
+<p>Kaggle Notebook: <a href="https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire">https://www.kaggle.com/jamesonthai/predicting-statistical-causes-of-historic-wildfire</a></p>
+
+<p>Data Source: <a href="https://www.kaggle.com/rtatman/188-million-us-wildfires">https://www.kaggle.com/rtatman/188-million-us-wildfires</a></p>
 
 <p>Citation:
     Short, Karen C. 2017. Spatial wildfire occurrence data for the United States, 1992-2015 [FPAFOD20170508]. 4th Edition. Fort Collins, CO: Forest Service Research Data Archive. <a href="https://doi.org/10.2737/RDS-2013-0009.4">https://doi.org/10.2737/RDS-2013-0009.4</a></p>
 
-<h2 id="notebook">Notebook</h2>
+<h1 id="Notebook">Notebook</h1>
 
 <p>You can download and run the notebook as it. Some of the required packages include plotly, json, pandas, sqlite3, scikit-learn, xgboost, random forests, and numpy.</p>
 
-<h2 id="prediction">Prediction</h2>
+<h1 id="Prediction">Prediction</h1>
 
-<p>The results are as follows, because the file size for the notebook is limited, I moved some of the other models to a different section which will be uploaded.
-  | | Random Forests | XGBoost | Logistic Regression | SVM
-  |&ndash;|&ndash;|&ndash;|&ndash; |&ndash; |
+<p>The results are as follows, because the file size for the notebook is limited, I moved some of the other models to a different section which will be uploaded.</p>
+
+<pre><code>|  Task  |  RF |  xgBoost | Logistic Regression  | SVM  |
+|---|---|---|---|---|
+|  13 categories |   |   |   |   |
+|   |   |   |   |   |
+|   |   |   |   |   |
+</code></pre>
+
+<p>| Task | Random Forests | XGBoost | Logistic Regression | SVM |
+  |-|&mdash;&mdash;&mdash;&mdash;&mdash;-|&mdash;&mdash;&mdash;|&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash; | &mdash; |
   | 13 categories | 59% | 60% | | |
   | 3 categories | n/a | 81% | | |</p>
 
@@ -214,21 +223,29 @@ if (!doNotTrack) {
 <li>Specifically for the 3 categories in Random Forests, it crashed. Currently trying to find a workaround.</li>
 </ul>
 
-<h2 id="graphs">Graphs</h2>
+<h1 id="Graphs">Graphs</h1>
 
 <p>&ndash; IN Progress &ndash;</p>
 
-<h3 id="u-s-a-county-fires">U.S.A. County Fires</h3>
+<h2 id="u-s-a-county-fires">U.S.A. County Fires</h2>
 
 <p>These graphs look at the number of reported county fires from 1992 to 2015.</p>
 
-<p><img src="readme_imgs/counties_fires.gif" alt="" />
-   - This animated graph displays the number of reported county fires from 1992 to 2015 by year. The information is broken down by state and further broken down by the counties for every year.</p>
+<p><img src="preloader.gif" alt="img" /></p>
 
-<p><img src="readme_imgs/second_analysis.png" alt="" />
-   - This second graphs displays the total number of reported county fires from 1992 to 2015.</p>
+<ul>
+<li>This animated graph displays the number of reported county fires from 1992 to 2015 by year. The information is broken down by state and further broken down by the counties for every year.
+<br /></li>
+</ul>
 
-<h3 id="u-s-a-wildfires-by-state">U.S.A. Wildfires by State</h3>
+<p><img src="readme_imgs/second_analysis.png" alt="" /></p>
+
+<ul>
+<li>This second graphs displays the total number of reported county fires from 1992 to 2015.
+<br /></li>
+</ul>
+
+<h2 id="u-s-a-wildfires-by-state">U.S.A. Wildfires by State</h2>
 
 <p><img src="readme_imgs/wildfires_all.png" alt="" /></p>
 
@@ -237,7 +254,7 @@ if (!doNotTrack) {
 <br /></li>
 </ul>
 
-<h3 id="statistical-causes-of-fires">Statistical Causes of Fires</h3>
+<h2 id="statistical-causes-of-fires">Statistical Causes of Fires</h2>
 
 <p><img src="readme_imgs/5th_analysis.png" alt="" /></p>
 
@@ -246,7 +263,7 @@ if (!doNotTrack) {
 <br /></li>
 </ul>
 
-<h3 id="acres-burned">Acres burned</h3>
+<h2 id="acres-burned">Acres burned</h2>
 
 <p><img src="readme_imgs/acres_burned.gif" alt="" /></p>
 
@@ -255,7 +272,7 @@ if (!doNotTrack) {
 <br /></li>
 </ul>
 
-<h3 id="correlations-between-predicted-variables">Correlations between predicted variables</h3>
+<h2 id="correlations-between-predicted-variables">Correlations between predicted variables</h2>
 
 <p><img src="readme_imgs/correlations.png" alt="" /></p>
 
@@ -263,14 +280,14 @@ if (!doNotTrack) {
 <li>Correlations between prediction variables, this information is used for the random forest tree.</li>
 </ul>
 
-<h3 id="feature-importance">Feature Importance</h3>
+<h2 id="feature-importance">Feature Importance</h2>
 
 <ul>
 <li>In Progress =&gt; Grabbing images&hellip;
 <br /></li>
 </ul>
 
-<h2 id="conclusion">Conclusion</h2>
+<h1 id="Conclusion">Conclusion</h1>
 
 <p>We can predict wildfires with around 60% accuracy across the 13 statistical causes. If we reduce the number of classification categories to natural, human, and other causes we can achieve around 81% accuracy! Ultimately fires in the United States are having an upward trend and are seemily becoming more frequent in states like California, North Carolina, and Arizona.</p>
 </div>
@@ -307,6 +324,14 @@ if (!doNotTrack) {
               <div class="ml-3">
                 <h4>Github Link</h4>
                 <div class="content"><a href="https://github.com/JamesonThai/wildfire">https://github.com/JamesonThai/wildfire</a></div>
+              </div>
+            </li>
+            
+            <li class="media mb-4">
+             <i class="mt-1 fas fa-code h2"></i>
+              <div class="ml-3">
+                <h4>Technologies Stack</h4>
+                <div class="content">Python, Exploratory Data Analysis, Time Series, Predictive Modeling, Random Forests, xgBoost, SVM, Logistic Regression, Data Visualiation, Plotly, Scikit-Learn, SQL</div>
               </div>
             </li>
             
