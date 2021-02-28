@@ -41,5 +41,15 @@ Goals Finished Visualize LA Neighborhoods in Web APP Conduct EDA of dataset.</de
 Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely meaningful variations through competitive multi-agent learning.</description>
     </item>
     
+    <item>
+      <title>Amazon Recommender</title>
+      <link>https://jamesonthai.github.io/portfolio/amazon_ratings/</link>
+      <pubDate>Mon, 12 Nov 2018 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/portfolio/amazon_ratings/</guid>
+      <description>&amp;ndash; Will Update Visuals
+I led two fellow students to develop a Python recomendation system for suggesting ratings for a user&amp;rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%.</description>
+    </item>
+    
   </channel>
 </rss>
