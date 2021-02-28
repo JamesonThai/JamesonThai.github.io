@@ -3,18 +3,53 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://jamesonthai.github.io/categories/big-data/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://jamesonthai.github.io/categories/</loc>
-    <lastmod>2021-02-12T12:14:34+06:00</lastmod>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/categories/cloud-services/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
   </url>
   
   <url>
     <loc>https://jamesonthai.github.io/categories/data-science/</loc>
-    <lastmod>2021-02-12T12:14:34+06:00</lastmod>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/categories/databases/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
   </url>
   
   <url>
     <loc>https://jamesonthai.github.io/</loc>
-    <lastmod>2021-02-12T12:14:34+06:00</lastmod>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/portfolio/laneighborhoods/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/categories/large-scale-data-analytics/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/portfolio/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://jamesonthai.github.io/categories/time-series-analysis/</loc>
+    <lastmod>2021-02-25T12:14:34+06:00</lastmod>
   </url>
   
   <url>
@@ -23,17 +58,7 @@
   </url>
   
   <url>
-    <loc>https://jamesonthai.github.io/portfolio/</loc>
-    <lastmod>2021-02-12T12:14:34+06:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://jamesonthai.github.io/portfolio/predicting_wildfires/</loc>
-    <lastmod>2021-02-12T12:14:34+06:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://jamesonthai.github.io/categories/time-series-analysis/</loc>
     <lastmod>2021-02-12T12:14:34+06:00</lastmod>
   </url>
   
