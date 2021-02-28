@@ -75,5 +75,23 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Deep Learning</title>
+      <link>https://jamesonthai.github.io/categories/deep-learning/</link>
+      <pubDate>Wed, 26 Feb 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://jamesonthai.github.io/categories/reinforcement-learning/</link>
+      <pubDate>Wed, 26 Feb 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
   </channel>
 </rss>

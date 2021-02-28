@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deep Learning on Jameson&#39;s Portfolio</title>
+    <link>https://jamesonthai.github.io/categories/deep-learning/</link>
+    <description>Recent content in Deep Learning on Jameson&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)</copyright>
+    <lastBuildDate>Wed, 26 Feb 2020 12:14:34 +0600</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/categories/deep-learning/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Pommerman</title>
+      <link>https://jamesonthai.github.io/portfolio/pommerman/</link>
+      <pubDate>Wed, 26 Feb 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/portfolio/pommerman/</guid>
+      <description>This project is currently being updated.
+Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely meaningful variations through competitive multi-agent learning.</description>
+    </item>
+    
+  </channel>
+</rss>

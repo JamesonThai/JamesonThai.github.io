@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
   <meta charset="utf-8">
-  <title>LA Neighborhood Scores</title>
+  <title>Pommerman</title>
 
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
@@ -49,12 +49,12 @@
   
   <meta property="og:image" content="https://jamesonthai.github.io/images/slider/background-5.jpg" />
   
-  <meta property="og:title" content="LA Neighborhood Scores" />
+  <meta property="og:title" content="Pommerman" />
 <meta property="og:description" content="This is meta description." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jamesonthai.github.io/portfolio/laneighborhoods/" />
-<meta property="article:published_time" content="2021-02-25T12:14:34+06:00" />
-<meta property="article:modified_time" content="2021-02-25T12:14:34+06:00" />
+<meta property="og:url" content="https://jamesonthai.github.io/portfolio/pommerman/" />
+<meta property="article:published_time" content="2020-02-26T12:14:34+06:00" />
+<meta property="article:modified_time" content="2020-02-26T12:14:34+06:00" />
 
   
 <script type="application/javascript">
@@ -163,29 +163,89 @@ if (!doNotTrack) {
         <div class="wow fadeInUp" data-wow-duration="1.5s">
           <img src="https://jamesonthai.github.io/images/slider/background-5.jpg" alt="image" class="img-fluid w-100 mb-5">
           <div class="about-me-text mb-4">
-            <h1>LA Neighborhood Scores</h1>
+            <h1>Pommerman</h1>
           </div>
           <div class="content">
 
 <p>This project is currently being updated.</p>
 
-<h1 id="Goals">Goals</h1>
+<p>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely  meaningful variations through competitive multi-agent learning. Our team was split betwen two teams; Pytorch and TensorForce, with the goal of seeing if different frameworks lead to different results but trying the same algorithms being PPO and A2C.</p>
 
-<h2 id="finished">Finished</h2>
+<p>We leverage pre-existing architecture and code from Pommerman Competition as cited below.</p>
+
+<blockquote>
+<p><a href="https://www.pommerman.com/">Pommerman Competition</a></p>
+
+<p>There is a medium article I&rsquo;m writing that will come out soon that will explain the methodology and my team&rsquo;s approach towards this project so stay tuned! Also this will probably be written on this site so check out either one.</p>
+</blockquote>
+
+<h2 id="goals">Goals</h2>
+
+<h3 id="primary">Primary</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Visualize LA Neighborhoods in Web APP</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Conduct EDA of dataset.</label></li>
-<li><label><input type="checkbox" checked disabled class="task-list-item"> Compare and evaluate different prediction models.</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Learn OpenAI Gym, Pommerman File, Suggested Algorithms</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Set up GCP or cloud training</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Build/Train PPO/A2C Agent</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Integrate Pytorch with Tensorboard</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> HyperParameter Tune</label></li>
+<li><label><input type="checkbox" checked disabled class="task-list-item"> Define Evaluation Metrics for Visualization</label></li>
 </ul>
 
-<h2 id="in-progress">In Progress</h2>
+<h3 id="in-progress">In Progress</h3>
 
 <ul class="task-list">
-<li><label><input type="checkbox" disabled class="task-list-item"> Update Landing Site</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Provide descriptive analysis of findings on site</label></li>
-<li><label><input type="checkbox" disabled class="task-list-item"> Migrate interaction onto this site</label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Publish Medium Article<br /></label></li>
+<li><label><input type="checkbox" disabled class="task-list-item"> Update this project on portfolio site.</label></li>
 </ul>
+
+<h2 id="algorithms">Algorithms</h2>
+
+<ul>
+<li>Proximal Policy Optimization (PPO)</li>
+<li>Advantage Actor Critic (A2C)</li>
+</ul>
+
+<blockquote>
+<p>Why PPO AND A2C?</p>
+</blockquote>
+
+<p>They&rsquo;re up-to-date algorithms that help agents improve as they are trained. They&rsquo;re the same with some differences being that PPO aims to be an improvement of A2C by preventing it from having drastic changes.</p>
+
+<p>PPO: Changes will not be as drastic as rewards that are capped at a threshold.</p>
+
+<h2 id="training">Training</h2>
+
+<blockquote>
+<p>Previously trained on GCP K80 GPU however moved to a local machine as I ran out of credits&hellip;</p>
+</blockquote>
+
+<p>In modifying the reward states, we researched papers extensively in seeing what was proposed and how it could help our model. Training with A2C is a lot quicker than PPO but not as consistent/stable.</p>
+
+<p>Note: Unfortuantely we could not use Google Collab which is a free to use service since it does not support Conda 2.7+ with Python 3+ as required to run the GYM environment.</p>
+
+<dl>
+<dt>Technical Terms</dt>
+<dd>GYM - Environment to run game simulation, enables us to tweak speed of game and playing</dd>
+<dd>Playground - Provided Pommerman project that allows us to build and train agents</dd>
+<dd>Reward Shaping- What is used to tell the agent their action was good or bad ranging from -1.0 to 1.0</dd>
+</dl>
+
+<h2 id="conclusion">Conclusion</h2>
+
+<p>Currently as it stands, the PPO agents perform a better than the A2C agents by 5 games (out of 100). However what is to be noted is that the PPO agents comparison between the two frame works Pytorch and TensorFlow, the Pytorch agent does a lot better (by 10 games) but this maybe because of the flaw in setting up the TensorFlow agent. Though this project is now concluded, I would like to take another look and see what the specific problem with the TensorFlow agent was. Additionally training these models was a really big hassle, we ran out of GCP credits and had to train on our own machines which took a substancial amount of time and resources.</p>
+
+<p>On the brightside, another team did take over this project and did their own investigation. Take a look here at this link.
+<a href="https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf">https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf</a>
+I&rsquo;m currently looking for a better link that has more information.</p>
+
+<h3 id="status">Status</h3>
+
+<p>In-Progress August 2018 - Feburary 2020</p>
+
+<blockquote>
+<p>This project has mostly been completed as it was a semester long class project. However I&rsquo;m doing some additional work being implementing PPO on Pytorch and trying out more reward shaping. <a href="https://www.youtube.com/watch?v=_EHb5Zf_MeI&amp;list=PL4BDpgS525rkNJCAWT-d3mQ9x1-uhNxSp&amp;index=1">Check out the video!</a></p>
+</blockquote>
 </div>
         </div>
       </div>
@@ -196,22 +256,38 @@ if (!doNotTrack) {
               <i class="mt-1 fas fa-calendar h2"></i>
                <div class="ml-3">
                  <h4>Date</h4>
-                 <div class="content">25 Feb, 2021</div>
+                 <div class="content">26 Feb, 2020</div>
                </div>
              </li>
              <li class="media mb-4">
                <i class="mt-1 fas fa-folder h2"></i>
                 <div class="ml-3">
                   <h4>Categories</h4>
-                  <div class="content"> Data Science, Time Series Analysis, Big Data, Large Scale Data Analytics, Databases, Cloud Services</div>
+                  <div class="content"> Machine Learning, Deep Learning, Reinforcement Learning, Cloud Services</div>
                 </div>
               </li>
             
             <li class="media mb-4">
              <i class="mt-1 fas fa-link h2"></i>
               <div class="ml-3">
-                <h4>Github</h4>
-                <div class="content"><a href="https://github.com/JamesonThai/DSCI551/tree/master/DSCI551_Project_LA">https://github.com/JamesonThai/DSCI551/tree/master/DSCI551_Project_LA</a></div>
+                <h4>Main Github Link</h4>
+                <div class="content"><a href="https://github.com/Pommerman">https://github.com/Pommerman</a></div>
+              </div>
+            </li>
+            
+            <li class="media mb-4">
+             <i class="mt-1 fas fa-link h2"></i>
+              <div class="ml-3">
+                <h4>CSCI 572 Project Repositories</h4>
+                <div class="content"><a href="https://github.com/csci-599-applied-ml-for-games">https://github.com/csci-599-applied-ml-for-games</a></div>
+              </div>
+            </li>
+            
+            <li class="media mb-4">
+             <i class="mt-1 fas fa-link h2"></i>
+              <div class="ml-3">
+                <h4>Original Fork</h4>
+                <div class="content"><a href="https://github.com/rwightman/pytorch-pommerman-rl">https://github.com/rwightman/pytorch-pommerman-rl</a></div>
               </div>
             </li>
             
@@ -219,7 +295,7 @@ if (!doNotTrack) {
              <i class="mt-1 fas fa-code h2"></i>
               <div class="ml-3">
                 <h4>Technologies Stack</h4>
-                <div class="content">AWS, CSS, Data Visualiation, Exploratory Data Analysis, Firebase, Flask, Git, Html, MapReduce, Pandas, Plotly, Python, Rest, SQL, Scikit-Learn, Spark, Time Series</div>
+                <div class="content">A2C, AI Agents, Conda, Deep Learning, GYM, Machine Learning, Multi-Agent Learning, Numpy, OpenCV, PPO, Policy Optimization, Python, Pytorch, Reinforcement Learning, Reward Function Objectives, TensorForce, TensorBoard, TensorFlow</div>
               </div>
             </li>
             
@@ -227,7 +303,7 @@ if (!doNotTrack) {
              <i class="mt-1 fas fa-question-circle h2"></i>
               <div class="ml-3">
                 <h4>Status</h4>
-                <div class="content">In Progress: Sept 2020-Present</div>
+                <div class="content">Finished: August 2019-Feburary 2020</div>
               </div>
             </li>
             
