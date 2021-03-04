@@ -47,7 +47,7 @@
   
 
   
-  <meta property="og:image" content="https://jamesonthai.github.io/images/slider/background-5.jpg" />
+  <meta property="og:image" content="https://jamesonthai.github.io/images/portfolio/amazon/Pipeline.png" />
   
   <meta property="og:title" content="Amazon Recommender" />
 <meta property="og:description" content="This is meta description." />
@@ -161,17 +161,30 @@ if (!doNotTrack) {
     <div class="row">
       <div class="col-lg-8 mb-4 mb-lg-0">
         <div class="wow fadeInUp" data-wow-duration="1.5s">
-          <img src="https://jamesonthai.github.io/images/slider/background-5.jpg" alt="image" class="img-fluid w-100 mb-5">
+          <img src="https://jamesonthai.github.io/images/portfolio/amazon/Pipeline.png" alt="image" class="img-fluid w-100 mb-5" width = "700", height = "450">
           <div class="about-me-text mb-4">
             <h1>Amazon Recommender</h1>
           </div>
           <div class="content">
 
-<p>&ndash; Will Update Visuals</p>
+<h1 id="table-of-contents">Table of Contents</h1>
+
+<ol>
+<li><a href="#Intro">Introduction</a></li>
+<li><a href="#Goals">Goals</a></li>
+<li><a href="#Algos">Algorithms</a></li>
+<li><a href="#Data">Dataset</a></li>
+<li><a href="#Mod">Models</a></li>
+<li><a href="#Dp">Data Processing</a></li>
+<li><a href="#Eval">Evaluation</a></li>
+<li><a href="#Fin">Conclusion</a></li>
+</ol>
+
+<h1 id="Intro">Introduction</h1>
 
 <p>I led two fellow students to develop a Python recomendation system for suggesting ratings for a user&rsquo;s review through collabortive filters and machine learning algorithms achieving our highest accuracy of 89%. We narrated and presented our findings in the Amazon project to a group of our peers in that we found common singular words and n-grams used when describing a project. At the end of the project, we were able to build a prediction model where given a sentence it recommended a star rating from 1 being the worst to 5 being the best for the given sentence.</p>
 
-<h2 id="goals">Goals</h2>
+<h1 id="Goals">Goals</h1>
 
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Acquire Amazon Dataset</label></li>
@@ -182,7 +195,7 @@ if (!doNotTrack) {
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Present findings to general and informed audience</label></li>
 </ul>
 
-<h2 id="algorithms">Algorithms</h2>
+<h1 id="Algos">Algorithms</h1>
 
 <ul>
 <li>KNN</li>
@@ -193,19 +206,45 @@ if (!doNotTrack) {
 <li>Decision Trees</li>
 </ul>
 
-<h2 id="dataset">Dataset</h2>
+<h1 id="Data">Dataset</h1>
 
 <p>We filtered the initial dataset of over 12 million reviews (12 GB) into five separate data frames corresponding to their star ratings using Pandas. I then processed the data frames through feature selection and transformation, storing them as csv&rsquo;s files.</p>
 
 <p>Note: The main reason we used such a small dataset was because we did not have enough computing power. Just running Naive Bayes alone took around a 4 days of non-stop running on the local machine.</p>
 
+<p>There were also some major problems with our data being internet jargon, punctuation, poor engligh and sarcasm.</p>
+
+<h1 id="Mod">Models</h1>
+
+<p>We chose our set of models for specific reasons. Naive Bayes and SVMs have been known to be good with strong text classification, Doc2Vec turns blocks of text into vectors of numbers, Logistic Regression is generally good at classification problems, and KNN can anlyze the sentiment of nearby vectorized reviews that could be similar and possibly yield good results.</p>
+
+<h1 id="Dp">Data Processing</h1>
+
+<p><img src="https://raw.githubusercontent.com/JamesonThai/project_imgs_repo/master/amazon/Pipeline.png" alt="image" class="img-fluid w-100 mb-5"></p>
+
+<p>This data processing step we do some basic parsing. We remove punctuations from all reviews, then lowercase every word. After that we split the reviews into 5 different files with one specific rating. Doc2Vec models and Naive Bayes models use a different pipeline instead as shown by the image above. In the Doc2Vec model, we train the model in 20 epochs while vectorising training and testing set. In the Naive Bayes model we remove stopwords, some common words, and rare word appearances. The training test split is 80-20.</p>
+
+<h1 id="Eval">Evaluation</h1>
+
+<p><img src="https://raw.githubusercontent.com/JamesonThai/project_imgs_repo/master/amazon/model_res.png" alt="image" class="img-fluid w-100 mb-5"></p>
+
+<p>In the image above, these evaluations are based on their accuracy. Going from best to worst is from right to left. From these we decided to continue with the Logistic Regression and linear SVM models since they gave more promising results as seen in the image below.</p>
+
+<p><img src="https://raw.githubusercontent.com/JamesonThai/project_imgs_repo/master/amazon/svmvslog.png" alt="image" class="img-fluid w-100 mb-5"></p>
+
+<p>RBF SVM, Naive Bayes, and K Nearest Neighbors use similar datasets since they take much longer to train and test.</p>
+
+<p><img src="https://raw.githubusercontent.com/JamesonThai/project_imgs_repo/master/amazon/log_output.png" alt="image" class="img-fluid w-100 mb-5"></p>
+
+<p>As seen from the previous image, reducing the scope of the predictions result in significantly better accuracies. Classifying only very positive (5) and very negative (1) yields about 89% accuracy. Classifying very positive (5), neutral (3), and very bad (1) yields about 73% accuracy.</p>
+
+<h1 id="Fin">Conclusion</h1>
+
+<p>The Doc2Vec, Linear SVM, and Logistic Regression model worked well whereas the Naive Bayes and KNN models did not. Non-Linear SVM took too long to train (4+ days&hellip;). Looking back, if we had a better understanding of the algorithms, we could have hyper-parameter tuned that resulted in a better performance. Additionally having a larger dataset to use and more computationaly available hardware would of led to quicker and better results.</p>
+
 <h3 id="status">Status</h3>
 
 <p>Completed April 2018 - December 2018</p>
-
-<blockquote>
-<p>Although listed as completed, this is a project I want to revisit when I have more time.</p>
-</blockquote>
 </div>
         </div>
       </div>
