@@ -167,8 +167,6 @@ if (!doNotTrack) {
           </div>
           <div class="content">
 
-<p>This project is currently being updated.</p>
-
 <p>Based off the classic game Bomberman, my team of 8 people tackle how agents acomplish tasks with infinitely  meaningful variations through competitive multi-agent learning. Our team was split betwen two teams; Pytorch and TensorForce, with the goal of seeing if different frameworks lead to different results but trying the same algorithms being PPO and A2C.</p>
 
 <p>We leverage pre-existing architecture and code from Pommerman Competition as cited below.</p>
@@ -177,13 +175,120 @@ if (!doNotTrack) {
 <p><a href="https://www.pommerman.com/">Pommerman Competition</a></p>
 
 <p><a href="https://github.com/rwightman/pytorch-pommerman-rl">Original Fork</a></p>
-
-<p>There is a medium article I&rsquo;m writing that will come out soon that will explain the methodology and my team&rsquo;s approach towards this project so stay tuned! Also this will probably be written on this site so check out either one.</p>
 </blockquote>
 
-<h2 id="goals">Goals</h2>
+<h1 id="table-of-contents">Table of Contents</h1>
 
-<h3 id="primary">Primary</h3>
+<ol>
+<li><a href="#Intro">Introduction</a></li>
+<li><a href="#RW">Related Work</a></li>
+<li><a href="#Meth">Methodology</a></li>
+<li><a href="#Res">Findings</a></li>
+<li><a href="#Cha">Challenges</a></li>
+<li><a href="#FS">Future Scope</a></li>
+<li><a href="#Fin">Conclusion</a></li>
+<li><a href="#Ref">References</a></li>
+</ol>
+
+<h1 id="Intro">Introduction</h1>
+
+<p>Pommerman is a game environment which copies the famous game from Nintendo, Bomberman, for reinforcement learning purposes. The environment is a symmetric 11x11 grid where there are four agents in each corner. In the game environment, there are wooden and rigid walls. Both wooden and rigid walls are impassable, however, a wooden wall can be destroyed. When a wooden wall is destroyed, it can become a passage or power-up. Power-ups can only be obtained by blowing up a wooden wall.</p>
+
+<p>The agent can move up, down, left, or right and can lay a bomb. Agents start with a bomb and can place bombs whenever they want. After nine time steps, bombs explode and any wooden walls, agents, power-ups, and other bombs in its range are destroyed. The goal of each agent is to be the final surviving player.</p>
+
+<p><img src="https://lh4.googleusercontent.com/7XnizaoXxkF_B6vtn4WwOwfr-NgdTeZEkh0IhqVU0M9CMspmjCmWKS0drlI0MfnTTfUEsNhAoUrKBhkCWzhjljb7cXmTeM4JER-tGeXrC6rPvdOh37__NoRLiP5iT_Z4PD0GTFeH" alt="image" class="img-fluid w-100 mb-5"></p>
+
+<p>There are also power-ups players can obtain. Powerups have a chance to spawn when a wooden box is exploded. These powerups are: get an extra bomb, get increased bomb explosion range, or get the ability to kick a bomb. An extra bomb allows the agent to drop one more bomb. The increased range increases the agent’s bomb blast strength by one. The can kick power-up allows the agents to kick bombs by running into them. When kicked, the bombs continue to travel in the direction the agent was moving until they encounter a bomb, a player, or a wall.</p>
+
+<p>The initial rewards function only rewards an agent with +1/-1 reward at the end of each game, and each game has a large variance in timesteps, depending on how long it takes for all other players to die. This creates a problem with delayed, sparse rewards for an AI agent, which will require some custom rewards shaping to help reinforcement learning algorithms to learn effectively.</p>
+
+<p>To tackle this project, we had to research and understand different reinforcement learning algorithms as well as the game’s environment. We decided to try two different reinforcement learning algorithms, PPO and A2C. This was because a few papers had results where vanilla DQN does not work well with the Pommerman environment. Testing and creating rewards shaping functions was another essential part of agent learning that heavily impacts training time and efficiency.</p>
+
+<h1 id="RW">Related Work</h1>
+
+<p>Pommerman has had many previous competitions to see which research teams could create the best AI agent. The most prominent agents to compete in competitions have all used PPO or A2C algorithms as the learning algorithm. However, these learning algorithms are not enough for the agent to learn to play Pommerman effectively due to the sparse rewards issue and the difficulty of laying bombs without suicide.</p>
+
+<p>One previous competition submission received strong competition results by using PPO algorithm alongside a custom action pruning function that would not allow an agent to move into positions that would lead to suicide. This helped prevent the agent from committing suicide during training so it could steadily learn to use bombs effectively. Also included a FIFO queue to keep track of previously visited coordinates, and gives rewards for traversing unvisited coordinates to encourage exploration.</p>
+
+<p>The winner of NeuroIPS Pommerman competition in 2018 used A2C algorithm alongside an implementation inspired by population-based training, where multiple A2C agents are created with different hyperparameters (specifically the discount factor), and each A2C agent is ranked based on match results.</p>
+
+<h1 id="Meth">Methodology</h1>
+
+<h3 id="pytorch-vs-tensorflow">PyTorch vs TensorFlow</h3>
+
+<p>Our approach to this project is to try running the agent with two frameworks, PyTorch and TensorFlow, alongside our different learning algorithms. We used a TensorFlow implementation of PPO and PyTorch implementation of A2C. PyTorch and TensorFlow don’t have built-in implementations of PPO and A2C, but there are frameworks built on top of PyTorch and TensorFlow which implement these algorithms. We used Tensorforce for TensorFlow and Ilya Kostrikov’s implementation for PyTorch. The Pommerman competition Playground package is implemented on top of OpenAI Gym. This package gives us direct access to game state and game environment for training and testing.  During training, we log the model’s layer weights, hyper parameters, and other observable features using Tensorboard. Tensorboard is not only compatible with both Pytorch and Tensorforce, but also allows us to easily monitor the agent during training.</p>
+
+<h3 id="reward-functions">Reward Functions</h3>
+
+<p>One obstacle we want to tackle is how the agent overcomes the local minima. This specific obstacle is tackled by reward shaping which helps the agent lay a bomb. As it currently is, our agent rarely places a bomb and instead runs away from other agents.</p>
+
+<p>Since the original rewards function only rewarded an agent at the end of each game depending on whether the agent was dead or alive, there is a sparse rewards issue. To fix this, all of our implemented reward functions will give the agent a reward at each timestep instead. We also tried to make our rewards as “hands off” as possible to avoid making something similar to a rule-based agent. The goal of our rewards functions was to help coax the agent to learn a more optimal policy.</p>
+
+<p>The rewards functions we implemented included a bomb dodging function. This function gave the agent a negative reward if that agent was in a bomb blast zone, while it rewarded the agent positively if the agent was in a safe location. The goal of this function was to help the agent learn to avoid bombs, so that it would not committ suicide. Another goal for rewards shaping was to give the agent an incentive to explore the grid. Without help, the agent would just learn to hide in its spawn corner and get reward for surviving as long as possible. This is suboptimal as we want our agent to pick up powerups and gain an advantage on its opponents. We introduced some rewards rules to help the agent explore and pick up power ups, such as a visited memory, where agents are rewarded for visiting coordinates not yet in the visited memory. We also incentivised blowing up wooden boxes, agents and also picking up power through specific reward functions.</p>
+
+<p>To test our dodging reward function, we gave another reward function that automatically awarded the agent for laying a bomb. This is so we can instantly have the agent drop a bomb and begin learning to avoid it. The introduction of this reward function is only temporary and for research and demonstration purposes. A long term goal is to not require an explicit reward for the agent to use bombs, but for the agent to learn its usefulness on its own.</p>
+
+<h4 id="environment">Environment</h4>
+
+<p>The Pommerman environment we train in has three structures; no walls, some walls, and default. The default environment has 32 wooden walls and 32 rigid walls with 20 power ups. Although the wall placement is randomly generated, there is a small section for each agent that is 4 walls that guarantees that the agent has a path to traverse. In regarding some walls, we use a combination of wooden-rigid; 16-16, 24-24, and 8-8 with the power ups being two less than the number of wooden walls.</p>
+
+<p>The last type of environment we use is one with no rigid or wooden walls. This is to see if and how much the agent’s behavior deviates from an environment with wooden walls.</p>
+
+<h3 id="algorithms">Algorithms</h3>
+
+<h4 id="a2c">A2C</h4>
+
+<p>A2C stands for Advantage Actor Critic and is a reinforcement learning algorithm that incorporates two models, and actor and a critic. The actor model consists of a model for the agent policy, and given observations, will determine the best course of action. The critic model learns to evaluate the agent and its game state, and generates a “value score” for the actor’s action given the state. The actor critic model will iteratively improve the actor policy weights that would result in the best increase in value score calculated by the critic.</p>
+
+<h4 id="ppo">PPO</h4>
+
+<p>PPO stands for Proximal Policy Optimization and is less computationally expensive than other policy gradient methods such as TRPO (Trust Region Policy Optimization). Policy Gradient methods use gradient ascent to update policy in order to maximize expected rewards. However, the update to policy could be too large, and the drastic policy change could lead to a suboptimal policy that could take a long time to recover from. PPO and TRPO incorporates a constraint to limit the size of each policy update to prevent this from happening, while PPO is computationally inexpensive compared to TRPO.</p>
+
+<h1 id="Res">Findings</h1>
+
+<p>The Tensorforce PPO agent underperformed compared to the PyTorch implementation of A2C agent. We are not yet sure if this underperformance is due to the Tensorforce implementation of the PPO algorithm or if it is due to the PPO algorithm itself. A2C agent results displayed more exploration during training while Tensorforce PPO agent would consistently get stuck in a suboptimal policy routine.</p>
+
+<p>For rewards shaping, we were able to implement three rewards shaping functions that helped the agents better perform certain tasks in the game. We implemented a rewards function to incentify staying out of the bomb blast radius, which helped the agent learn to better dodge bombs. We also created a rewards function that incentivized the agents to explore unexplored tiles in the game grid. Lastly, we incentivized the agent to pick up power ups. We were not yet able to find some combination of rewards functions that would lead to the agent using bombs correctly. Implementing these different rewards functions by themselves led to improved results for the respective actions they were intended for, but more rewards value tuning is needed in order for these functions to work well together.</p>
+
+<h1 id="Cha">Challenges</h1>
+
+<p>There were multiple issues with finding appropriate frameworks and open-source code that produced consistent and reliable results.  The Pommerman codebase was outdated and required updating to run with the current version of Tensorforce. Tensorforce implementation of PPO had a variety of issues. Tensorforce lacked a lot of documentation and features, such as multiprocessing for training. Tensorforce PPO agent also was learning a lot less efficiently than PyTorch A2C agent, and ultimately the results from PyTorch implementation of A2C far surpassed the results from Tensorforce implementation of PPO.</p>
+
+<p>Another challenge was the limited training resources. We were limited by what we could train from the GCP credits and also by the Cinema computer resources being that we could not train on those computers for long periods of time. Rewards shaping was our most challenging task. We had to use creativity and trial and error to find useful reward functions to help coax our policy agent to a more optimal policy. We used ideas from other papers to help build our own rewards shaping functions, such as for exploration and bomb survival.  This was a very time consuming task as we had to train a model to test each reward function. This does not include training to test for optimal reward values. Even after testing a single new rewards function and getting favorable results, combining multiple rewards functions together required additional testing to balance the reward values of the different reward functions in relation to each other.</p>
+
+<p>A huge challenge while designing rewards functions was to make sure the functions were not too specific that the agent would essentially be rule-based. It was also difficult to determine the effectiveness of a rewards function because training time was also a hyperparameter. Even the lack of rewards functions could also lead to results if trained long enough.</p>
+
+<h1 id="FS">Future Scope</h1>
+
+<p>Continue Rewards shaping experimentation to find the most effective and minimal combination of rewards functions. Tune rewards function values. Train PPO  agent in PyTorch and compare it to our A2C agent and Tensorforce PPO agent.</p>
+
+<h1 id="Fin">Conclusion</h1>
+
+<p>Currently as it stands, the PPO agents perform a better than the A2C agents by 5 games (out of 100). However what is to be noted is that the PPO agents comparison between the two frame works Pytorch and TensorFlow, the Pytorch agent does a lot better (by 10 games) but this maybe because of the flaw in setting up the TensorFlow agent. Though this project is now concluded, I would like to take another look and see what the specific problem with the TensorFlow agent was. Additionally training these models was a really big hassle, we ran out of GCP credits and had to train on our own machines which took a substancial amount of time and resources.</p>
+
+<p>On the brightside, another team did take over this project and did their own investigation. Take a look here at this link.
+<a href="https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf">https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf</a>
+I&rsquo;m currently looking for a better link that has more information.</p>
+
+<h1 id="Ref">References</h1>
+
+<ol>
+<li><a href="https://www.pommerman.com/">Pommerman Competitions</a></li>
+<li><a href="https://github.com/MultiAgentLearning/playground">Cinjon Resnick etc. PlayGround: AI Research into Multi-Agent Learning</a></li>
+<li><a href="https://github.com/rwightman/pytorch-pommerman-rl">Ross Wightman, PyTorch Reinforcement Learning  for Pommerman</a></li>
+<li><a href="https://github.com/tensorforce/tensorforce">Tensorforce: a TensorFlow library for applied reinforcement learning</a></li>
+<li><a href="http://ir.hit.edu.cn/~jguo/docs/notes/dqn-atari.pdf">Jiang Guo, Human-level control through deep reinforcement learning</a></li>
+<li><a href="https://github.com/tensorflow/tensorboard/blob/master/README.md">TensorBoard</a></li>
+<li><a href="https://www.borealisai.com/en/blog/pommerman-team-competition-or-how-we-learned-stop-worrying-and-love-battle/">The Pommerman team competition or: How we learned to stop worrying and love the battle.</a></li>
+<li><a href="https://github.com/ikostrikov/pytorch-a2c-ppo-acktr">Ilya Kostrikov&rsquo;s PyTorch Implementation for A2C, PPO, and ACKTR</a></li>
+<li><a href="https://nihal111.github.io/docs/pommerman_report.pdf">Multi-Agent Strategies for Pommerman</a></li>
+<li><a href="https://arxiv.org/abs/1907.11788">On Hard Exploration for Reinforcement Learning: a Case Study in Pommerman</a></li>
+<li><a href="https://arxiv.org/abs/1812.07297">Continual Match Based Training in Pommerman: Technical Report</a></li>
+<li><a href="https://arxiv.org/abs/1707.06347">Proximal Policy Optimization Algorithms</a></li>
+<li><a href="https://arxiv.org/abs/1602.017837">Asynchronous Methods for Deep Reinforcement Learning</a></li>
+</ol>
+
+<h1 id="Goals">Goals</h1>
 
 <ul class="task-list">
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Learn OpenAI Gym, Pommerman File, Suggested Algorithms</label></li>
@@ -194,51 +299,9 @@ if (!doNotTrack) {
 <li><label><input type="checkbox" checked disabled class="task-list-item"> Define Evaluation Metrics for Visualization</label></li>
 </ul>
 
-<h2 id="algorithms">Algorithms</h2>
+<h1 id="status">Status</h1>
 
-<ul>
-<li>Proximal Policy Optimization (PPO)</li>
-<li>Advantage Actor Critic (A2C)</li>
-</ul>
-
-<blockquote>
-<p>Why PPO AND A2C?</p>
-</blockquote>
-
-<p>They&rsquo;re up-to-date algorithms that help agents improve as they are trained. They&rsquo;re the same with some differences being that PPO aims to be an improvement of A2C by preventing it from having drastic changes.</p>
-
-<p>PPO: Changes will not be as drastic as rewards that are capped at a threshold.</p>
-
-<h2 id="training">Training</h2>
-
-<blockquote>
-<p>Previously trained on GCP K80 GPU however moved to a local machine as I ran out of credits&hellip;</p>
-</blockquote>
-
-<p>In modifying the reward states, we researched papers extensively in seeing what was proposed and how it could help our model. Training with A2C is a lot quicker than PPO but not as consistent/stable.</p>
-
-<p>Note: Unfortuantely we could not use Google Collab which is a free to use service since it does not support Conda 2.7+ with Python 3+ as required to run the GYM environment.</p>
-
-<dl>
-<dt>Technical Terms</dt>
-<dd>GYM - Environment to run game simulation, enables us to tweak speed of game and playing</dd>
-<dd>Playground - Provided Pommerman project that allows us to build and train agents</dd>
-<dd>Reward Shaping- What is used to tell the agent their action was good or bad ranging from -1.0 to 1.0</dd>
-</dl>
-
-<h2 id="conclusion">Conclusion</h2>
-
-<p>Currently as it stands, the PPO agents perform a better than the A2C agents by 5 games (out of 100). However what is to be noted is that the PPO agents comparison between the two frame works Pytorch and TensorFlow, the Pytorch agent does a lot better (by 10 games) but this maybe because of the flaw in setting up the TensorFlow agent. Though this project is now concluded, I would like to take another look and see what the specific problem with the TensorFlow agent was. Additionally training these models was a really big hassle, we ran out of GCP credits and had to train on our own machines which took a substancial amount of time and resources.</p>
-
-<p>On the brightside, another team did take over this project and did their own investigation. Take a look here at this link.
-<a href="https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf">https://github.com/csci-599-applied-ml-for-games/PommermanS2020/blob/master/materials/CS599%20EDD.pdf</a>
-I&rsquo;m currently looking for a better link that has more information.</p>
-
-<h3 id="status">Status</h3>
-
-<blockquote>
 <p>This project has mostly been completed as it was a semester long class project. However I&rsquo;m doing some additional work being implementing PPO on Pytorch and trying out more reward shaping. However this is no longer a working project as I&rsquo;m focusing on other work. <a href="https://www.youtube.com/watch?v=_EHb5Zf_MeI&amp;list=PL4BDpgS525rkNJCAWT-d3mQ9x1-uhNxSp&amp;index=1">Check out the video!</a></p>
-</blockquote>
 </div>
         </div>
       </div>
@@ -271,8 +334,8 @@ I&rsquo;m currently looking for a better link that has more information.</p>
             <li class="media mb-4">
              <i class="mt-1 fas fa-link h2"></i>
               <div class="ml-3">
-                <h4>CSCI 572 Project Repositories</h4>
-                <div class="content"><a href="https://github.com/csci-599-applied-ml-for-games">https://github.com/csci-599-applied-ml-for-games</a></div>
+                <h4>CSCI <sup>599</sup>&frasl;<sub>527</sub> Project Repositories</h4>
+                <div class="content"><a href="https://github.com/csci-599-applied-ml-for-games">https://github.com/csci-599-applied-ml-for-games</a>, <a href="https://github.com/CS527Applied-Machine-Learning-for-Games">https://github.com/CS527Applied-Machine-Learning-for-Games</a></div>
               </div>
             </li>
             
