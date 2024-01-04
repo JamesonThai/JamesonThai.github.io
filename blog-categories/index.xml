@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blog Categories on Jameson&#39;s Portfolio</title>
+    <link>https://jamesonthai.github.io/blog-categories/</link>
+    <description>Recent content in Blog Categories on Jameson&#39;s Portfolio</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Copyright &amp;copy; 2020 a hugo theme by [somrat](https://somrat.netlify.com)</copyright>
+    <lastBuildDate>Thu, 25 Feb 2021 12:14:34 +0600</lastBuildDate>
+    
+	<atom:link href="https://jamesonthai.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Fun Stuff</title>
+      <link>https://jamesonthai.github.io/blog-categories/fun-stuff/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/blog-categories/fun-stuff/</guid>
+      <description></description>
+    </item>
+    
+    <!-- <item>
+      <title>Cloud Services</title>
+      <link>https://jamesonthai.github.io/categories/cloud-services/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/cloud-services/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Data Science</title>
+      <link>https://jamesonthai.github.io/categories/data-science/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/data-science/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Databases</title>
+      <link>https://jamesonthai.github.io/categories/databases/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/databases/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Machine Learning</title>
+      <link>https://jamesonthai.github.io/categories/machine-learning/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/machine-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Time Series Analysis</title>
+      <link>https://jamesonthai.github.io/categories/time-series-analysis/</link>
+      <pubDate>Thu, 25 Feb 2021 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/time-series-analysis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Information Retrieval</title>
+      <link>https://jamesonthai.github.io/categories/information-retrieval/</link>
+      <pubDate>Tue, 12 May 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/information-retrieval/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Deep Learning</title>
+      <link>https://jamesonthai.github.io/categories/deep-learning/</link>
+      <pubDate>Wed, 26 Feb 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/deep-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Reinforcement Learning</title>
+      <link>https://jamesonthai.github.io/categories/reinforcement-learning/</link>
+      <pubDate>Wed, 26 Feb 2020 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/reinforcement-learning/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Natural Language Processing</title>
+      <link>https://jamesonthai.github.io/categories/natural-language-processing/</link>
+      <pubDate>Mon, 12 Nov 2018 12:14:34 +0600</pubDate>
+      
+      <guid>https://jamesonthai.github.io/categories/natural-language-processing/</guid>
+      <description></description>
+    </item> -->
+    
+  </channel>
+</rss>
